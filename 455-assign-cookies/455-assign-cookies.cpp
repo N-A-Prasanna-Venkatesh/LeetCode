@@ -12,11 +12,11 @@ public:
         while(i<n){
             if(top==n1)break;
             if(g[i]<=s[top]){
-                i+=1;
-                ans+=1;
-                top+=1;
+                i++;
+                ans++;
+                top++;
             }else{
-                top+=1;
+                top++;
             }
         }
         
