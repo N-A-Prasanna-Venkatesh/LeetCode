@@ -11,7 +11,7 @@ public:
             else{
                 ans.push_back(i+1);
                 ans.push_back(j+1);
-                break;
+                return ans;
             }
         }
         return ans;
