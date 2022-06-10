@@ -1,6 +1,7 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
+        //used his approach https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/376363/CPP-Solution-for-beginners-or-O(n)-time-or-Longest-Substring-without-repeating-characters
         int ans=0,i=0,j=0,n=s.size();
        map<char,int> mapss;
         
