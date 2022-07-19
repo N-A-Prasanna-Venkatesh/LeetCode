@@ -1,13 +1,14 @@
 class Solution {
 public:
     bool winnerOfGame(string c) {
-        map<char,int> chances;
+        int ca=0,cb=0;
         int len = c.length();
         if(len<=2) return false;
         for(int i=1;i<len-1;i++)
             if(c[i-1] == c[i] && c[i] == c[i+1]){
-                chances[c[i]]++;
+                if(c[i] == 'A')ca+=1;
+                else cb+=1;
             }
-        return chances['A'] > chances['B'];
+        return ca>cb;
     }
 };
