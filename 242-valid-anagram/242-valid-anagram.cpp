@@ -1,11 +1,14 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        map<char,int> a;
-        for(auto i : s) a[i]++;
-        for(auto i : t) a[i]--;
-        for(auto i : a)
-            if(i.second !=0) return false;
+        if(s.size()!=t.size()) return false;
+        int counter[26]={};
+        for(int i =0;i<s.size();i++){
+            counter[s[i]-'a']++;
+            counter[t[i]-'a']--;
+        }
+        for(auto i : counter)
+            if(i!=0) return false;
         return true;
         
     }
